@@ -1,38 +1,52 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-  }
-  
-  header {
-    background: #f4f4f4;
-    padding: 10px 20px;
-  }
-  
-  header h1 {
-    margin: 0;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 10px;
-  }
-  
-  section {
-    margin: 20px;
-    padding: 20px;
-  }
-  
-  footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: #f4f4f4;
+  padding: 10px 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+section {
+  margin: 20px;
+  padding: 20px;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Gallery-Specific Styles */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 10px; /* Spacing between images */
+  padding: 20px;
+}
+
+.gallery-grid img {
+  width: 100%; /* Full width of the grid cell */
+  height: auto; /* Maintain aspect ratio */
+  border: 2px solid #ccc; /* Light gray border around images */
+  border-radius: 5px; /* Rounded corners */
+}
