@@ -9,41 +9,41 @@
 <body>
   <header>
     <h1>Snazzy Paws Grooming</h1>
-    <nav>
+    <nav role="navigation" aria-label="Main Navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="booking.html">Booking</a></li>
+        <li><a href="booking.html" aria-current="page">Booking</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section>
-    <h2>Book an Appointment</h2>
-    <form action="#" method="post">
-      <label for="ownerName">Owner’s Name:</label>
-      <input type="text" id="ownerName" name="ownerName" placeholder="Enter your name" required>
+  <main>
+    <section>
+      <h2>Book an Appointment</h2>
+      <form>
+        <label for="name">Owner's Name:</label>
+        <input type="text" id="name" name="name" required>
 
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-      <label for="dogName">Dog’s Name:</label>
-      <input type="text" id="dogName" name="dogName" placeholder="Enter your dog’s name" required>
+        <label for="dogName">Dog's Name:</label>
+        <input type="text" id="dogName" name="dogName" required>
 
-      <label for="breed">Breed:</label>
-      <input type="text" id="breed" name="breed" placeholder="Enter your dog’s breed" required>
+        <label for="breed">Breed:</label>
+        <input type="text" id="breed" name="breed" required>
 
-      <label for="age">Age:</label>
-      <input type="number" id="age" name="age" placeholder="Enter your dog’s age" required>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
 
-      <button type="submit">Submit</button>
-    </form>
-  </section>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
-    <p>Opening Hours: Mon–Fri 9 AM–5 PM | Sat 10 AM–4 PM</p>
-  </footer>
-</body>
-</html>
+    <p>&copy; 2025 Snazzy Paws Grooming</p>
+    <p>Opening Hours: Mon–Fri 9 AM–5 PM | Sat 10 AM–4 PM
