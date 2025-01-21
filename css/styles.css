@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.8;
@@ -13,9 +13,9 @@ body {
 
 /* Header */
 header {
-  background-color: #85d6f9; /* Blue from the girl's apron */
+  background-color: #358ebc; /* Darker blue for better contrast */
   padding: 20px;
-  border-bottom: 3px solid #f38aba; /* Pink from "PAWS" */
+  border-bottom: 3px solid #d16085; /* Darker pink accent */
   text-align: center;
   color: #ffffff; /* White text for contrast */
 }
@@ -23,7 +23,7 @@ header {
 header h1 {
   margin: 0;
   font-size: 2.5rem; /* Larger font size */
-  color: #f38aba; /* Pink branding color */
+  color: #ffffff; /* White branding text for better contrast */
   font-weight: bold;
 }
 
@@ -43,24 +43,24 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #ffffff; /* White links */
+  color: #ffffff; /* White links for contrast on blue */
   font-weight: bold;
-  font-size: 1.2rem; /* Larger text for links */
+  font-size: 1.2rem;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
-  color: #f38aba; /* Pink hover/focus */
-  outline: 2px dashed #ffffff; /* White focus outline */
+  color: #d16085; /* Darker pink hover/focus */
+  outline: 2px dashed #ffffff; /* White focus outline for accessibility */
 }
 
 /* Footer */
 footer {
-  background-color: #85d6f9; /* Blue footer */
+  background-color: #358ebc; /* Darker blue */
   color: #ffffff;
   text-align: center;
   padding: 15px 0;
-  border-top: 3px solid #f38aba; /* Pink accent */
+  border-top: 3px solid #d16085; /* Darker pink accent */
   margin-top: auto; /* Sticky footer */
 }
 
@@ -68,7 +68,12 @@ footer p {
   margin: 5px 0;
 }
 
-/* Main Content */
+/* Layout and Alignment */
+section {
+  text-align: center; /* Centers all text inside the section */
+  margin-bottom: 20px; /* Adds spacing between text and banner */
+}
+
 main {
   max-width: 1100px;
   margin: 20px auto;
@@ -92,36 +97,97 @@ main {
   }
 }
 
+/* General Section Alignment for Forms */
+section {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center everything horizontally */
+  justify-content: flex-start; /* Align content to the top */
+  padding: 20px;
+  text-align: center; /* Center text content like titles */
+}
+
 /* Forms */
+form {
+  max-width: 700px; /* Restrict the form container width */
+  width: 100%; /* Make form responsive to parent container */
+  padding: 20px; /* Add space inside the form container */
+  background-color: #ffffff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-top: 20px; /* Add space between title and form */
+}
+
+/* Form Titles (Ensure Consistency) */
+section h2 {
+  font-size: 2rem; /* Larger title font size */
+  margin: 0; /* Remove unnecessary spacing */
+  color: #2c3e50; /* Dark grey */
+  padding-bottom: 10px; /* Add spacing under the title */
+}
+
+/* Form Fields */
 form label {
   display: block;
-  margin-bottom: 5px;
-  color: #2c3e50;
-  font-size: 1.2rem; /* Larger font for form labels */
+  margin-bottom: 10px; /* Spacing between labels and fields */
+  color: #2c3e50; /* Dark grey for better readability */
+  font-size: 1.2rem; /* Slightly larger font size for labels */
 }
 
 form input,
 form textarea,
 form select {
-  width: 100%;
-  padding: 12px; /* Increased padding for larger inputs */
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px; /* Slightly rounded corners */
-  background-color: #ecf0f1; /* Light grey */
-  font-size: 1rem; /* Larger input text */
+  display: block; /* Ensure fields appear in a block layout */
+  width: 100%; /* Make fields span the full container width */
+  margin: 0 auto; /* Center the fields horizontally */
+  padding: 12px; /* Add padding for usability */
+  margin-bottom: 15px; /* Add spacing between fields */
+  border: 1px solid #ddd; /* Light grey border */
+  border-radius: 8px; /* Rounded corners for inputs */
+  background-color: #ecf0f1; /* Light grey background */
+  font-size: 1rem; /* Standard input text size */
+  color: #2c3e50; /* Dark grey text */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
 form input:focus,
 form textarea:focus {
   outline: none;
-  border-color: #85d6f9; /* Blue focus */
-  box-shadow: 0 0 5px rgba(133, 214, 249, 0.5);
+  border-color: #358ebc; /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(53, 142, 188, 0.5); /* Subtle shadow on focus */
 }
 
+/* Form Button Styling */
+form button {
+  background-color: #d16085; /* Pink button background */
+  color: #ffffff; /* White text for contrast */
+  border: none;
+  padding: 12px 20px; /* Adequate button padding */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 1.2rem; /* Larger button text */
+  cursor: pointer;
+}
+
+form button:hover,
+form button:focus {
+  background-color: #b04d6e; /* Darker pink for hover and focus states */
+}
+
+/* Responsive Form Design */
+@media (max-width: 768px) {
+  section {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  form {
+    max-width: 90%; /* Adjust form width for smaller screens */
+  }
+}
+
+/* Buttons */
 button {
-  background-color: #f38aba; /* Pink buttons */
-  color: #ffffff;
+  background-color: #d16085; /* Darker pink for better contrast */
+  color: #ffffff; /* White text */
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
@@ -131,7 +197,7 @@ button {
 
 button:hover,
 button:focus {
-  background-color: #f279a7; /* Slightly darker pink */
+  background-color: #b04d6e; /* Slightly darker pink */
 }
 
 /* Table */
@@ -146,11 +212,11 @@ table td {
   border: 1px solid #ddd;
   padding: 12px;
   text-align: left;
-  font-size: 1.1rem; /* Slightly larger font size */
+  font-size: 1.1rem;
 }
 
 table th {
-  background-color: #85d6f9; /* Blue header */
+  background-color: #358ebc; /* Darker blue for better contrast */
   color: #ffffff; /* White text */
 }
 
@@ -159,8 +225,19 @@ table tr:nth-child(even) {
 }
 
 table tr:hover {
-  background-color: #f38aba; /* Pink row hover */
+  background-color: #d16085; /* Darker pink row hover */
   color: #ffffff;
+}
+
+/* Style for Book an Appointment Section */
+.booking-section form {
+  max-width: 700px; /* Same as the Contact Us form */
+  width: 100%; /* Ensure responsiveness */
+  padding: 20px; /* Maintain consistent padding */
+  background-color: #ffffff; /* Keep consistent with other sections */
+  border-radius: 10px; /* Match the border radius of the form */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-top: 20px; /* Add space between title and form */
 }
 
 /* Gallery Grid */
@@ -173,17 +250,22 @@ table tr:hover {
 .gallery-grid img {
   width: 100%;
   height: auto;
-  border: 3px solid #f38aba; /* Pink border */
+  border: 3px solid #d16085; /* Darker pink border */
   border-radius: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gallery-grid img:hover {
-  transform: scale(1.1); /* Slight zoom effect */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Elevated shadow */
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Design */
+/* Remove default border from linked images */
+.gallery-grid a img {
+  border: none;
+}
+
+/* Responsive Gallery Design */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
